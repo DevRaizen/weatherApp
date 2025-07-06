@@ -1,0 +1,46 @@
+<ng-container *ngIf="weatherHistory && weatherHistory.length > 0; else noHistory">
+  <ion-card *ngFor="let record of weatherHistory">
+    <div class="card-header">
+      <h3>{{ record.city }}, {{ record.country }}</h3>
+      <div class="action-buttons">
+        <ion-button (click)="calldelete(record.id)" class="icon-button">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+
+    <!-- Weather Icon and Temperature -->
+    <div class="icon-and-temp">
+      <img [src]="'https://openweathermap.org/img/wn/' + record.icon + '@2x.png'" alt="Weather Icon">
+      <h3>{{ record.temperature }}°C</h3>
+    </div>
+
+    <!-- Weather Info in 2x2 Grid -->
+    <div class="weather-info">
+      <div class="info-block">
+        <p class="label"><ion-icon name="water-outline"></ion-icon> Humidity</p>
+        <p class="value">{{ record.humidity }}%</p>
+      </div>
+      <div class="info-block">
+        <p class="label"><ion-icon name="speedometer-outline"></ion-icon> Wind Speed</p>
+        <p class="value">{{ record.wind_speed }} m/s</p>
+      </div>
+      <div class="info-block">
+        <p class="label"><ion-icon name="cloud-outline"></ion-icon> Weather</p>
+        <p class="value">{{ record.weather_description | titlecase }}</p>
+      </div>
+      <div class="info-block">
+        <p class="label"><ion-icon name="thermometer-outline"></ion-icon> Temperature</p>
+        <p class="value">{{ record.temperature }}°C</p>
+      </div>
+    </div>
+
+    <ng-template #loading>
+      <p>Loading weather data...</p>
+    </ng-template>
+  </ion-card>
+</ng-container>
+
+<ng-template #noHistory>
+  <p>No weather history found.</p>
+</ng-template>

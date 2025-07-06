@@ -1,0 +1,49 @@
+
+<ng-container *ngIf="favorite && favorite.length > 0; else noFavorites">
+  <ion-card *ngFor="let fav of favorite">
+    <div class="card-header">
+      <h3>{{ fav.city }}, {{ fav.country }}</h3>
+      <div class="action-buttons">
+        <ion-button (click)="showEdit(fav)" class="icon-button">
+          <ion-icon name="pencil-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="deleteFavorite(fav.id)" class="icon-button">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+
+    <!-- Weather Icon and Temperature -->
+    <div class="icon-and-temp">
+      <img [src]="'https://openweathermap.org/img/wn/' + fav.icon + '@2x.png'" alt="Weather Icon">
+      <h3>{{ fav.temperature }}°C</h3>
+    </div>
+
+    <!-- Weather Info in 2x2 Grid -->
+    <div class="weather-info">
+      <div class="info-block">
+        <p class="label"><ion-icon name="water-outline"></ion-icon> Humidity</p>
+        <p class="value">{{ fav.humidity }}%</p>
+      </div>
+      <div class="info-block">
+        <p class="label"><ion-icon name="speedometer-outline"></ion-icon> Wind Speed</p>
+        <p class="value">{{ fav.wind_speed }} m/s</p>
+      </div>
+      <div class="info-block">
+        <p class="label"><ion-icon name="cloud-outline"></ion-icon> Weather</p>
+        <p class="value">{{ fav.weather_description }}</p>
+      </div>
+      <div class="info-block">
+        <p class="label"><ion-icon name="thermometer-outline"></ion-icon> Temperature</p>
+        <p class="value">{{ fav.temperature }}°C</p>
+      </div>
+    </div> 
+  </ion-card>
+</ng-container>
+
+<ng-template #noFavorites>
+  <p id="noFavorites">
+    <ion-icon name="sad-outline"></ion-icon>
+    No favorite weather data found.
+  </p>
+</ng-template>

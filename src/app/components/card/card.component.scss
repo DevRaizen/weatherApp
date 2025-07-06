@@ -1,0 +1,133 @@
+.search-card {
+  --background: #f0f4f8;
+  --border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-input {
+  --background: #ffffff;
+  --border-radius: 8px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --placeholder-color: #a0a0a0;
+  margin-bottom: 15px;
+}
+
+.custom-input ion-icon {
+  color: #a0a0a0;
+}
+
+.custom-button {
+  --background: #1e90ff;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(30, 144, 255, 0.4);
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.custom-button:hover {
+  --background: #1c86ee;
+}
+
+.weather-card {
+  position: relative;
+  --border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.weather-speed{
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+  overflow: hidden;    /* Hide any overflowing text */
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.hot {
+  --background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+}
+
+.warm {
+  --background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+}
+
+.cold {
+  --background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small-title {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.weather-condition-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.temperature {
+  font-size: 48px;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.degree-symbol {
+  font-size: 30px;
+  vertical-align: top;
+}
+
+.weather-description {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.weather-icon {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.weather-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.weather-value {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+ion-row {
+  justify-content: center;
+}
+
+.centered-col {
+  text-align: center;
+}
+
+.favorite-button {
+  margin-top: 15px;
+  position: absolute;
+  top: 8px; /* Adjust as needed */
+  right: 8px; /* Adjust as needed */
+  z-index: 10; /* Ensure it's above other elements */
+
+}
+.weather-condition-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+}

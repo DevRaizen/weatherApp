@@ -1,0 +1,44 @@
+<ion-menu content-id="main-content">
+  <ion-header>
+    <ion-toolbar style="--background: linear-gradient(135deg, #4facfe, #00f2fe); color: white;">
+      <ion-title>
+        <img src="/assets/logo.png" alt="App Logo" style="width: 40px; height: auto; vertical-align: middle;">
+        MayWeather
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item (click)="navigateto('home')">
+        <ion-icon name="home-outline" slot="start"></ion-icon>
+        Home
+      </ion-item>
+      <ion-item (click)="navigateto('favorite')">
+        <ion-icon name="heart-outline" slot="start"></ion-icon>
+        Favorite
+      </ion-item>
+      <ion-item (click)="navigateto('history')">
+        <ion-icon name="time-outline" slot="start"></ion-icon>
+        History
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content [fullscreen]="true" id="menu-content">
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar style="--background: linear-gradient(135deg, #4facfe, #00f2fe); color: white;">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <!-- Favorite Icon Before Title -->
+        <ion-title>
+          <ion-icon name="heart-outline" style="margin-right: 8px; vertical-align: middle;"></ion-icon>
+          Favorite
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+  <app-comfav style="display: block; padding: 10px; margin-top: 50px;"></app-comfav>
+</ion-content>

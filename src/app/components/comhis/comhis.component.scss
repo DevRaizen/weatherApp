@@ -1,0 +1,101 @@
+/* Gradient Card Style */
+ion-card {
+    margin: 12px;
+    border-radius: 16px;
+    padding: 16px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe); /* Blue gradient */
+    color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  ion-card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Card Header */
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px; /* Adjusted spacing for better organization */
+  }
+  
+  .card-header h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .action-buttons ion-button {
+    --background: transparent; /* Remove background */
+    --box-shadow: none; /* Remove button shadow */
+    padding: 0;
+  }
+  
+  .action-buttons ion-icon {
+    font-size: 1.5rem;
+    color: white; /* Make icons purely white */
+  }
+  
+  /* Weather Icon and Temperature */
+  .icon-and-temp {
+    margin: 8px 0;
+    text-align: center;
+  }
+  
+  .icon-and-temp img {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: auto;
+  }
+  
+  .icon-and-temp h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  /* Weather Info Grid */
+  .weather-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 16px; /* Adjusted spacing for better alignment */
+    margin-top: 12px;
+  }
+  
+  .info-block {
+    text-align: center;
+  }
+  
+  .info-block .label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 4px; /* Add space between label and value */
+    color: rgba(255, 255, 255, 0.8); /* Slightly lighter label text */
+  }
+  
+  .info-block .value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+  }
+  
+  /* No History */
+  #noHistory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 1.4rem;
+    color: white;
+  }
+  
